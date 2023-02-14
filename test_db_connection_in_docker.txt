@@ -1,0 +1,9 @@
+. /opt/ibm/ace-11/server/bin/mqsiprofile
+export ODBCINI=/home/aceuser/ace-server/odbc.ini
+export DB2CLIINIPATH=/home/aceuser/initial-config/odbcini 
+ 
+mqsicvp -n DBT2 -u db2inst1 -p db2-docker 
+
+mqsisetdbparms -w /home/aceuser/ace-server -n DBT2 -u db2inst1 -p db2-docker
+
+export DB2CLIINIPATH=/home/aceuser/initial-config/odbcini
